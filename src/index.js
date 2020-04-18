@@ -50,6 +50,10 @@ module.exports = {
           encoding: null,
           printerNameLabel: 'Printer name'
         },
+        'es-ES': {
+          encoding: null,
+          printerNameLabel: 'nombre de impresora'
+        }
       };
       childProcess.exec('%WINdir%\\System32\\cscript.exe %WINdir%\\System32\\printing_Admin_Scripts\\' + language + '\\prnmngr.vbs -l | find /i "' + langs[language].printerNameLabel + '"', {
         encoding: 'buffer'
